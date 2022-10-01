@@ -30,10 +30,10 @@ namespace MedicalWebApplicationHelpers.Helpers
         }
         public  async Task<string> uploadImage(IFormFile imagefile, string path)
         {
-            string fileName =$"/images/{Guid.NewGuid().ToString()}-{imagefile.FileName}";
+            string fileName =$"{Guid.NewGuid().ToString()}-{imagefile.FileName}";
             string filePath = Path.Combine(path, fileName);
             await imagefile.CopyToAsync(new FileStream(filePath, FileMode.Create));
-            return fileName;
+            return $"/images/{fileName}";
         }
     }
 }

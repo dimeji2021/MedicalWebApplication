@@ -44,6 +44,7 @@ namespace MedicalWebApplication.Controllers
                 var hasAdd = await _productService.AddProduct(post);
                 if (hasAdd)
                 {
+                    ModelState.Clear();
                     return View();
                 }
             }
