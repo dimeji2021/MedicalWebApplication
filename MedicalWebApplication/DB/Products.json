@@ -68,5 +68,12 @@
     "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and ",
     "ProductName": "Lorem Ipsum",
     "ProductLink": "#"
+  },
+  {
+    "Id": "fa7f809d-44d3-46a7-b65b-98a98dd38b7d",
+    "ProductImageUrl": "/images/c8302699-2fbb-4a4f-9256-4ace1a69b9ce-waterBottle.webp",
+    "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and ",
+    "ProductName": "Lorem Ipsum",
+    "ProductLink": "#"
   }
 ]
