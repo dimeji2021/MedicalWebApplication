@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wj8rP49sMgt1zD3m2wnE5PE5ykeQt+kGdJJDLPxU/4SB5yBnymeVQ//uLM0VTeEtJFJMJl4Ra7JZmDhv7OKw/g==",
+  "dgSpecHash": "GGgtiwneY7wgHacSZa8/ZmBYRSlUsKcNExPIbhA0IBh3Y8/nt/0iVx7ZrOiqeKqLCGcDm3mC8Y1KAzPPeRgs0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\MedicalWebApplication\\MedicalWebApplicationHelpers\\MedicalWebApplicationHelpers.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hp\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,5 @@
-﻿using MedicalWebApplicationDomain.Models;
+﻿using MedicalWebApplicationDomain.Enums;
+using MedicalWebApplicationDomain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,9 @@ namespace MedicalWebApplicationService.ViewModel
     public class PaginationViewModel
     {
         public IEnumerable<Product> Products { get; set; }
+        public List<Product> CarouselProducts { get; set; }
         public IEnumerable<Doctor> Doctors { get; set; }
+        public Role Roles { get; set; }
         public ResearchStatisticsViewModel Research { get; set; }
         public int PageSize { get; set; }
         public int CurrentPage { get; set; }

@@ -7,6 +7,7 @@
     "PhoneNumber": 8139490503.0,
     "Password": "6f4ba5ca7fee9a3bae773f7b3b6cddcc29c4002e9352b9614cd632cafe4e98da",
     "IsActive": true,
+    "Role" : 0,
     "DateCreated": "2022-08-22T17:27:28.1894662+01:00"
   },
   {
@@ -17,6 +18,7 @@
     "PhoneNumber": 8139490503.0,
     "Password": "6f4ba5ca7fee9a3bae773f7b3b6cddcc29c4002e9352b9614cd632cafe4e98da",
     "IsActive": true,
+    "Role": 0,
     "DateCreated": "2022-08-23T23:08:50.9588371+01:00"
   },
   {
@@ -27,16 +29,18 @@
     "PhoneNumber": 8139490503.0,
     "Password": "75c8c9e45748e96614a7f22db9824a5fb04b13c45991622aa0e2b436c5e2cbad",
     "IsActive": true,
+    "Role": 0,
     "DateCreated": "2022-08-23T23:38:16.9645528+01:00"
   },
   {
     "UserId": "344a3744-b209-432f-b584-51ccf84d0bcf",
-    "FullName": "Test Test",
-    "Email": "adedimeji99@yahoo.com",
-    "Gender": 0,
+    "FullName": "Deborah Kuratha",
+    "Email": "deborah@yahoo.com",
+    "Gender": 1,
     "PhoneNumber": 8139490503.0,
     "Password": "6f4ba5ca7fee9a3bae773f7b3b6cddcc29c4002e9352b9614cd632cafe4e98da",
     "IsActive": true,
+    "Role": 1,
     "DateCreated": "2022-08-26T19:30:34.3560817+01:00"
   }
 ]

@@ -1,4 +1,5 @@
-﻿using MedicalWebApplicationService.IService;
+﻿using MedicalWebApplicationDomain.Enums;
+using MedicalWebApplicationService.IService;
 using MedicalWebApplicationService.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +31,6 @@ namespace MedicalWebApplication.Controllers
                     return RedirectToAction("Login", "Auth");
                 }
                 ModelState.AddModelError(string.Empty, "Email Already exist");
-
             }
             return View();
         }
@@ -47,6 +47,7 @@ namespace MedicalWebApplication.Controllers
             {
                 HttpContext.Session.SetString("FullName", user.FullName);
                 HttpContext.Session.SetString("UserId", user.UserId);
+                HttpContext.Session.SetString("Role", user.Role.ToString());
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError(string.Empty, "User does not exist");

@@ -3,7 +3,7 @@ using MedicalWebApplicationHelpers.IHelpers;
 using MedicalWebApplicationInfastructure.IRepository;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MedicalWebApplicationInfastructure.Repository
@@ -18,8 +18,22 @@ namespace MedicalWebApplicationInfastructure.Repository
         }
         public async Task<List<Product>> GetAllProductsAsync()
         {
-
             return await _readWriteToJson.ReadJsonAsync<Product>(productFile);
+        }
+        public async Task<bool> AddProductAsync(Product product)
+        {
+            return await _readWriteToJson.WriteJsonAsync<Product>(productFile, product);
+        }
+        public async Task<bool> DeleteProductAsync(Guid Id)
+        {
+            var products = await _readWriteToJson.ReadJsonAsync<Product>(productFile);
+            var product = products.Where(s=>s.Id.Equals(Id)).FirstOrDefault();
+            if (product is null)
+            {
+                return false;
+            }
+            products.Remove(product);
+            return _readWriteToJson.UpdateJsonAsync<Product>(productFile, products);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace MedicalWebApplicationDomain.Models
         public decimal PhoneNumber { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; } = true;
+        public Role Role { get; set; } = Role.Users;
         public DateTime DateCreated { get; set; } = DateTime.Now;
     }
 }

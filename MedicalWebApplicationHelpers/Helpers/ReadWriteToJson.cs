@@ -33,6 +33,12 @@ namespace MedicalWebApplicationHelpers.Helpers
             }
             return true;
         }
+        public bool UpdateJsonAsync<T>(string location, List<T> contents)
+        {
+            var convertedJson = JsonConvert.SerializeObject(contents, Formatting.Indented);
+            File.WriteAllText(db + location, convertedJson);
+            return true;
+        }
 
         public async Task<List<T>> ReadJsonAsync<T>(string location)
         {

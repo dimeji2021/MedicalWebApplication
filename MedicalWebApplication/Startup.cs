@@ -40,6 +40,8 @@ namespace MedicalWebApplication
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IResearchStatisticsService, ResearchStatisticsService>();
+            services.AddScoped<IPagination, PaginationService>();
+
 
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(1);//You can set Time   

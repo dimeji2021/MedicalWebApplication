@@ -1,0 +1,63 @@
+﻿@model PaginationViewModel;
+<div class="container">
+    <section class="profile4">
+        @foreach (var item in Model.Products)
+        {
+            <div class="profile4-content">
+                <img src="@item.ProductImageUrl" class="profile4-content-img" />
+                <p class="profile4-content-text1">@item.ProductName</p>
+                <p class="profile4-content-text2">@item.ProductDescription</p>
+                <a href="@item.ProductLink">Read more></a>
+                <nav class="navbar navbar-expand-sm">
+                    <ul class="nav ml-md-auto">
+                        <li class="active nav-item">
+                            <a asp-controller="Doctor" asp-action="Add" class="btn btn-primary">Update</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Doctor" asp-action="DeleteProduct" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        }
+    </section>
+
+    <nav aria-label="Page navigation" class="page-navigtion">
+        <ul class="pagination">
+            <li class="page-item d-flex align-items-center">
+                <a href=""><i class="fa fa-chevron-left"></i></a>
+                <a class="page-link ml-2" asp-route-page="@Model.PreviousPage">
+                    Prev
+                </a>
+            </li>
+            @for (int i = 1; i <= Model.NumberPages; i++)
+            {
+                <li class="page-item ">
+                    @if (Model.CurrentPage == i)
+                    {
+                        <a class="page-link" asp-route-page="@i" style="background-color:blue;">
+                            @i
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="page-link" asp-route-page="@i">
+                            @i
+                        </a>
+                    }
+
+                </li>
+            }
+
+            <li class="page-item d-flex align-items-center">
+                <a class="page-link mr-2" asp-route-page="@Model.NextPage">
+                    Next
+                </a>
+                <a href=""><i class="fa fa-chevron-right"></i></a>
+            </li>
+            <li class="nav-item col-md-9 bg-light text-right">
+                <a asp-controller="Doctor" asp-action="Add" class="btn btn-primary">ADD</a>
+            </li>
+        </ul>
+    </nav>
+</div>

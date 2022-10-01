@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using MedicalWebApplicationHelpers.IHelpers;
+using Microsoft.AspNetCore.Http;
 
 namespace MedicalWebApplicationHelpers.Helpers
 {
@@ -24,6 +27,13 @@ namespace MedicalWebApplicationHelpers.Helpers
                 }
                 return builder.ToString();
             }
+        }
+        public  async Task<string> uploadImage(IFormFile imagefile, string path)
+        {
+            string fileName =$"/images/{Guid.NewGuid().ToString()}-{imagefile.FileName}";
+            string filePath = Path.Combine(path, fileName);
+            await imagefile.CopyToAsync(new FileStream(filePath, FileMode.Create));
+            return fileName;
         }
     }
 }
