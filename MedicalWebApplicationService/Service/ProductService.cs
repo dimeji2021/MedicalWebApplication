@@ -6,7 +6,6 @@ using MedicalWebApplicationService.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MedicalWebApplicationService.Service
